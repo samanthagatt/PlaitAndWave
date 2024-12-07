@@ -12,3 +12,13 @@
   font-family: "DesignatedAccent";
   src: url("./Fonts/DesignatedAccent.woff2") format("woff2");
 }
+
+@font-face {
+  font-family: "DesignatedBody";
+  src: url("./Fonts/DesignatedBody.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DesignatedNav-Heavy";
+  src: url("./Fonts/DesignatedNav-Heavy.woff2") format("woff2");
+}
