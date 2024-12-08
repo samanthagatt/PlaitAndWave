@@ -1,18 +1,20 @@
-import { ThemeProvider } from '@mui/material';
+import { ThemeProvider } from "@mui/material";
 
-import './App.css';
+import "./App.css";
 
-import Header from './Components/Header';
-import Home from './Components/Home';
-import About from './Components/About';
+import Header from "./Components/Header";
+import Home from "./Components/Home";
+import About from "./Components/About";
 
-import { theme } from './theme'
+import { theme } from "./theme"
+import Services from "./Components/Services";
 
 const App = () =>
     <ThemeProvider theme={theme}>
         <Header />
         <Home />
         <About />
+        <Services />
     </ThemeProvider>;
 
 export default App;

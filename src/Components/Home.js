@@ -1,6 +1,7 @@
-import { Box, Typography, Stack } from '@mui/material';
+import { Box, Typography, Stack } from "@mui/material";
 
-import { blueOffset, headerHeight } from '../common';
+import { blueOffset, headerHeight } from "../common";
+import { accentBackgroundColor } from "../theme";
 
 const Home = () =>
     <section>
@@ -15,7 +16,7 @@ const Home = () =>
         </Box>
 
         <Stack alignItems="center" sx={{
-            backgroundColor: "rgb(213,231,240)",
+            backgroundColor: accentBackgroundColor,
             marginTop: "-" + blueOffset + "rem",
             paddingBottom: "2.25rem"
         }}>

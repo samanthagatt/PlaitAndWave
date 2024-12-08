@@ -10,7 +10,7 @@ const About = () =>
             backgroundPositionX: "center",
             backgroundPositionY: "center"
         }}>
-            <Typography variant="sectionTitle" sx={{ 
+            <Typography variant="aboutTitle" sx={{ 
                 marginBottom: "8rem",
                 marginLeft: "5rem",
                 lineHeight: "4.5rem",
@@ -28,7 +28,7 @@ const About = () =>
         }}>
             {/*
             // "Our Salon"
-            <Typography variant="sectionTitle" sx={{ 
+            <Typography variant="aboutTitle" sx={{ 
                 marginLeft: "-21.5rem",
                 marginTop: "17rem",
                 lineHeight: "4.5rem",
@@ -44,7 +44,7 @@ const About = () =>
                 spacing="2rem"
                 padding="10rem 5rem"
             >
-                <Typography variant="title">Get to Know Us</Typography>
+                <Typography variant="smallTitle">Get to Know Us</Typography>
                 <Typography variant="aboutDescription">
                     Welcome to Plait + Wave, a premier hair salon located in beautiful Naples, FL. Founded in 2018 by Stevie, we specialize in custom colors using top industry techniques, including lived-in blonde, balayage, dimensional hair, and foilayage. Our talented team features the owner, Stevie with Plait + Wave, Corina with Chroma Salon, Cheyanne with Hair by Cheyanne Hamilton, and lash artist Francesca with Frankie's Designs, all dedicated to providing you with exceptional service and stunning results. Experience the perfect blend of creativity and talent at Plait + Wave, where we're all about making your hair dreams come true in a fun and relaxed vibe!
                 </Typography>
