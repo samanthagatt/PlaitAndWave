@@ -12,51 +12,66 @@ const shadowColor = "rgba(0, 0, 0, 0.4)";
 export const theme = createTheme({
     typography: {
         h1: {
-            fontFamily: "DesignatedLogo",
+            fontFamily: "Logo",
             letterSpacing: "1px",
             fontSize: "1.25rem",
             color: darkTextColor
         },
         nav: {
-            fontFamily: "DesignatedNav",
+            fontFamily: "Nav",
             color: navTextColor
         },
         accent: {
-            fontFamily: "DesignatedAccent",
+            fontFamily: "Accent",
             fontSize: accentFontSize + "rem",
             color: lightTextColor,
             textShadow: `${shadowColor} 0px 4px 5px`,
             marginTop: blueOffset - (accentFontSize / 1.5) + "rem"
         },
         body: {
-            fontFamily: "DesignatedBody",
+            fontFamily: "Body",
             fontSize: "1.62rem",
             color: darkTextColor
         },
         aboutDescription: {
-            fontFamily: "DesignatedNav",
+            fontFamily: "Nav",
             fontSize: "1.15rem",
             color: darkTextColor,
             lineHeight: "2rem"
         },
         smallTitle: {
-            fontFamily: "DesignatedNav",
+            fontFamily: "Nav",
             fontSize: "1.2rem",
             color: darkTextColor,
             fontWeight: "bold"
         },
         aboutTitle: {
-            fontFamily: "DesignatedNav-Heavy",
+            fontFamily: "Nav-Heavy",
             fontSize: "3.35rem",
             fontWeight: "bold",
             color: lightTextColor
         },
         sectionTitle: {
-            fontFamily: "DesignatedNav-Heavy",
-            fontSize: "3rem",
+            fontFamily: "Nav-Heavy",
+            fontSize: "3.25rem",
             color: lightTextColor,
             textShadow: `${shadowColor} 0px 4px 5px`,
-            letterSpacing: "0.6rem"
+            letterSpacing: "0.65rem"
+        },
+        servicesTitle: {
+            fontFamily: "Font11",
+            fontSize: "1.15rem",
+            letterSpacing: "0.05rem"
+        },
+        servicesPrice: {
+            fontFamily: "Font3",
+            fontSize: "1.1rem"
+        },
+        servicesDetails: {
+            fontFamily: "Font3",
+            fontWeight: "bold",
+            fontSize: "0.9rem",
+            lineHeight: "1.25rem"
         }
     },
     components: {

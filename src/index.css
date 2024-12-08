@@ -1,24 +1,74 @@
 @font-face {
-  font-family: "DesignatedLogo";
-  src: url("./Fonts/DesignatedLogo.woff2") format("woff2");
+  font-family: "Logo";
+  src: url("./Fonts/Logo.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "DesignatedNav";
-  src: url("./Fonts/DesignatedNav.woff2") format("woff2");
+  font-family: "Nav";
+  src: url("./Fonts/Nav.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "DesignatedAccent";
-  src: url("./Fonts/DesignatedAccent.woff2") format("woff2");
+  font-family: "Accent";
+  src: url("./Fonts/Accent.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "DesignatedBody";
-  src: url("./Fonts/DesignatedBody.woff2") format("woff2");
+  font-family: "Body";
+  src: url("./Fonts/Body.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "DesignatedNav-Heavy";
-  src: url("./Fonts/DesignatedNav-Heavy.woff2") format("woff2");
+  font-family: "Nav-Heavy";
+  src: url("./Fonts/Nav-Heavy.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font1";
+  src: url("./Fonts/Font1.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font2";
+  src: url("./Fonts/Font2.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font3";
+  src: url("./Fonts/Font3.woff2") format("woff2");
+}
+
+/* @font-face {
+  font-family: "Font4";
+  src: url("./Fonts/Font4.woff2") format("woff2");
+} */
+
+@font-face {
+  font-family: "Font5";
+  src: url("./Fonts/Font5.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font7";
+  src: url("./Fonts/Font7.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font8";
+  src: url("./Fonts/Font8.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font9";
+  src: url("./Fonts/Font9.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font10";
+  src: url("./Fonts/Font10.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font11";
+  src: url("./Fonts/Font11.woff2") format("woff2");
 }
