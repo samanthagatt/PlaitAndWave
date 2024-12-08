@@ -1,0 +1,17 @@
+@keyframes slideLeft {
+    0% {
+        transform: translateX(-33.33%);
+    }
+    100% {
+        transform: translateX(-66.66%);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-33.33%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

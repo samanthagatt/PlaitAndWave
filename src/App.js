@@ -8,6 +8,7 @@ import About from "./Components/About";
 
 import { theme } from "./theme"
 import Services from "./Components/Services";
+import Reviews from "./Components/Reviews";
 
 const App = () =>
     <ThemeProvider theme={theme}>
@@ -15,6 +16,7 @@ const App = () =>
         <Home />
         <About />
         <Services />
+        <Reviews />
     </ThemeProvider>;
 
 export default App;
