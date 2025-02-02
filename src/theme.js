@@ -67,11 +67,39 @@ export const theme = createTheme({
             fontFamily: "Font3",
             fontSize: "1.1rem"
         },
+        // TODO: SMFG - This is bolder in safari than firefox
         servicesDetails: {
             fontFamily: "Font3",
             fontWeight: "bold",
             fontSize: "0.9rem",
             lineHeight: "1.25rem"
+        },
+        navArrows: {
+            fontFamily: "Nav",
+            padding: "2rem",
+            fontSize: "6rem",
+            color: "white",
+            cursor: "pointer",
+            userSelect: "none",
+            textShadow: "2px 2px 5px rgba(0,0,0,0.5)",
+            "&:hover": { color: "rgba(255,255,255,0.7)" }
+        },
+        reviewDescription: {
+            fontFamily: "Nav",
+            textAlign: "center",
+            fontWeight: "bold",
+            textShadow: "0 0 10px rgba(0,0,0,1), 0 0 5px rgba(0,0,0,1)",
+            color: "white",
+            fontSize: "1.5rem",
+            lineHeight: "2.25rem"
+        },
+        reviewAuthor: {
+            fontFamily: "Nav",
+            textAlign: "center",
+            fontWeight: "bold",
+            textShadow: "0 0 10px rgba(0,0,0,1), 0 0 5px rgba(0,0,0,1)",
+            color: "white",
+            fontSize: "1.5rem"
         }
     },
     components: {
