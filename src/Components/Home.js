@@ -3,7 +3,7 @@ import { Box, Typography, Stack } from "@mui/material";
 import { blueOffset, headerHeight } from "../common";
 import { accentBackgroundColor } from "../theme";
 
-const Home = () =>
+const Home = () => (
     <section>
         <Box sx={{ margin: "0 8rem" }}>
             <img src="./Images/focal.jpeg" style={{
@@ -37,6 +37,7 @@ const Home = () =>
                 foilayage | balayage | lived in hair
             </Typography>
         </Stack>
-    </section>;
+    </section>
+);
 
 export default Home;

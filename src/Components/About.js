@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 
-const About = () =>
+const About = () => (
     <Stack direction="row">
         {/* 
         // Alternate About section image with "Our Story"
@@ -50,6 +50,7 @@ const About = () =>
                 </Typography>
             </Stack>
         </Box>
-    </Stack>;
+    </Stack>
+);
 
 export default About;

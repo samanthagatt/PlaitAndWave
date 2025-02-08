@@ -1,6 +1,6 @@
 import { AppBar, Stack, Toolbar, Typography } from "@mui/material";
 
-const Header = () =>
+const Header = () => (
     <AppBar position="fixed">
         <Toolbar sx={{ justifyContent: "space-between", margin: "0 15.15rem" }}>
             <Typography variant="h1">PLAIT + WAVE</Typography>
@@ -12,6 +12,7 @@ const Header = () =>
                 <Typography variant="nav">Contact</Typography>
             </Stack>
         </Toolbar>
-    </AppBar>;
+    </AppBar>
+);
 
 export default Header;

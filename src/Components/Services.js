@@ -22,7 +22,7 @@ const servicesData = [
     }
 ];
 
-const Service = ({ data }) =>
+const Service = ({ data }) => (
     <Stack alignItems="center" sx={{
         backgroundColor: lightBackgroundColor,
         padding: "0.65rem",
@@ -52,9 +52,10 @@ const Service = ({ data }) =>
         }}>
             {data.description}
         </Typography>
-    </Stack>;
+    </Stack>
+);
 
-const Services = () =>
+const Services = () => (
     <Stack component="section" spacing="2.5rem" alignItems="center" sx={{ 
         paddingTop: "1.75rem",
         paddingBottom: "4.5rem",
@@ -62,8 +63,9 @@ const Services = () =>
     }}>
         <Typography variant="sectionTitle">SERVICES</Typography>
         <Stack direction="row" spacing="1rem">
-            {servicesData.map(data => <Service data={data} />)}
+            {servicesData.map((data, i) => <Service key={i} data={data} />)}
         </Stack>
-    </Stack>;
+    </Stack>
+);
 
 export default Services;

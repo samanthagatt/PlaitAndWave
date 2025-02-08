@@ -118,7 +118,7 @@ export const theme = createTheme({
             styleOverrides: {
                 root: {
                     // Makes font thinner by removing fuzzy edges (?)
-                    "-webkit-font-smoothing": "antialiased"
+                    WebkitFontSmoothing: "antialiased"
                 }
             }
         }

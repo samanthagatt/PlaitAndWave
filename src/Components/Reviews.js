@@ -23,7 +23,7 @@ const reviewHeight = "31.2rem";
 
 const Review = ({ index }) => {
     const review = reviews[index];
-    return <Stack key={index} justifyContent="center" sx={{ 
+    return <Stack justifyContent="center" sx={{ 
         minWidth: "100%",
         height: reviewHeight,
         backgroundImage: `url("${review.imgSrc}")`,
@@ -75,7 +75,7 @@ const Reviews = () => {
             }}>
                 <Review index={reviews.length - 1} />
                 {reviews.map((_, index) => (
-                    <Review index={index} />
+                    <Review key={index} index={index} />
                 ))}
                 <Review index={0} />
             </Stack>

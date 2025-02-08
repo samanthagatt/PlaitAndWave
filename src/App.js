@@ -9,14 +9,17 @@ import About from "./Components/About";
 import { theme } from "./theme"
 import Services from "./Components/Services";
 import Reviews from "./Components/Reviews";
+import Portfolio from "./Components/Portfolio";
 
-const App = () =>
+const App = () => (
     <ThemeProvider theme={theme}>
         <Header />
         <Home />
         <About />
         <Services />
         <Reviews />
-    </ThemeProvider>;
+        <Portfolio />
+    </ThemeProvider>
+);
 
 export default App;
