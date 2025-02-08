@@ -20,11 +20,10 @@ const reviews = [
 ];
 
 const reviewHeight = "31.2rem";
-const animationDuration = 1;
 
 const Review = ({ index }) => {
     const review = reviews[index];
-    return <Stack justifyContent="center" key={index} sx={{ 
+    return <Stack key={index} justifyContent="center" sx={{ 
         minWidth: "100%",
         height: reviewHeight,
         backgroundImage: `url("${review.imgSrc}")`,
@@ -42,35 +41,25 @@ const Reviews = () => {
     const [isAnimating, setIsAnimating] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(1);
 
-    const handleNav = (newIndex) => {
-        if (!isAnimating) {
-            setIsAnimating(true);
-            setCurrentIndex(newIndex);
-        }
+    const handleNav = (newIndex, isCurrentIndicatorPress = false) => {
+        if (!isCurrentIndicatorPress && isAnimating) return;
+        setIsAnimating(true);
+        setCurrentIndex(newIndex);
     };
 
-    function isCurrentIndex(reviewIndex) {
-        // currentIndex === reviews.length + 1 means it's currently on the first index placeholder
-        if (currentIndex > reviews.length) {
-            return reviewIndex === 0;
-        // currentIndex === 0 means it's currently on the last index placeholder
-        } else if (currentIndex <= 0) {
-            return reviewIndex === reviews.length - 1;
-        // currentIndex is off by one so it can accommodate the placeholder for the last page before the regular pages
-        } else {
-            return reviewIndex === currentIndex - 1;
-        }
-    };
+    const isCurrentIndex = (reviewIndex) => (
+        (currentIndex > reviews.length) ? reviewIndex === 0
+            : (currentIndex <= 0) ? reviewIndex === reviews.length - 1
+            : reviewIndex === currentIndex - 1
+    );
 
     const onAnimationEnd = () => {
-        let correctedIndex = currentIndex;
-        if (currentIndex <= 0) {
-            correctedIndex = reviews.length;
-        } else if (currentIndex > reviews.length) {
-            correctedIndex = 1;
-        }
         setIsAnimating(false);
-        setCurrentIndex(correctedIndex);
+        setCurrentIndex(
+            (currentIndex <= 0) ? reviews.length 
+                : (currentIndex > reviews.length) ? 1
+                : currentIndex
+        );
     };
 
     return (
@@ -81,7 +70,7 @@ const Reviews = () => {
             overflow: "hidden"
         }}>
             <Stack direction="row" onTransitionEnd={onAnimationEnd} sx={{ 
-                transition: isAnimating ? `transform ${animationDuration}s ease` : "", 
+                transition: isAnimating ? "transform 1s ease" : "", 
                 transform: `translateX(-${(currentIndex) * 100}%)`
             }}>
                 <Review index={reviews.length - 1} />
@@ -90,25 +79,21 @@ const Reviews = () => {
                 ))}
                 <Review index={0} />
             </Stack>
-            <Typography variant="navArrows" onClick={() => handleNav(currentIndex - 1)} sx={{
-                position: "absolute",
-                top: "50%",
-                left: "0",
-                transform: "translateY(-50%)",
-                zIndex: 2
-            }}>
-                {"‹"}
-            </Typography>
 
-            <Typography variant="navArrows" onClick={() => handleNav(currentIndex + 1)} sx={{
-                position: "absolute",
-                top: "50%",
-                right: "0",
-                transform: "translateY(-50%)",
-                zIndex: 2,
-            }}>
-                {"›"}
-            </Typography>
+            {["‹", "›"].map((arrow, i) => (
+                <Typography key={i} variant="navArrows" 
+                    onClick={() => handleNav(currentIndex + (i ? 1 : -1))} 
+                    sx={{
+                        position: "absolute",
+                        top: "50%",
+                        [i ? "right" : "left"]: "0",
+                        transform: "translateY(-50%)",
+                        zIndex: 2
+                    }}
+                >
+                    {arrow}
+                </Typography>
+            ))}
 
         <Stack direction="row" justifyContent="center" sx={{
             position: "absolute",
@@ -118,7 +103,7 @@ const Reviews = () => {
             transform: "translateX(-50%)"
         }}>
             {reviews.map((_, index) => (
-                <Box key={index} onClick={() => handleNav(index + 1)} sx={{
+                <Box key={index} onClick={() => handleNav(index + 1, true)} sx={{
                     width: "0.75rem",
                     height: "0.75rem",
                     margin: "0 0.25rem",
